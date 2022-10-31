@@ -68,10 +68,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
+          # Выполняет pull образа с DockerHub
           sudo docker pull alexey1727/infraactions
+          #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-<<<<<<< HEAD
           sudo docker run --rm -d -p 5000:5000 alexey1727/infraactions
-=======
-          sudo docker run --rm -d -p 5000:5000 alexey1727/infraactions
->>>>>>> 495ff0f254c1b847320b320db561bdb71ccfb647
