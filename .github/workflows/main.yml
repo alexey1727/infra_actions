@@ -70,4 +70,8 @@ jobs:
         script: |
           sudo docker pull alexey1727/infraactions
           sudo docker stop $(sudo docker ps -a -q)
+<<<<<<< HEAD
           sudo docker run --rm -d -p 5000:5000 alexey1727/infraactions
+=======
+          sudo docker run --rm -d -p 5000:5000 alexey1727/infraactions
+>>>>>>> 495ff0f254c1b847320b320db561bdb71ccfb647
